@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEURAL_GEN // Pass Gen v1.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="grid"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="status-bar">
+                <span class="pulse"></span>
+                <span class="status-text">SYSTEM_ONLINE</span>
+            </div>
+            <h1>NEURAL_GEN <span class="version">v1.0</span></h1>
+            <p class="subtitle">Secure entropy generation protocol</p>
+        </header>
+
+        <section class="display-card">
+            <div class="password-display-wrapper">
+                <input type="text" id="passwordDisplay" readonly placeholder="P4S$W0RD_H3R3">
+                <button id="copyBtn" class="icon-btn" title="Copy to local terminal">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M16,1H4C2.9,1,2,1.9,2,3v14h2V3h12V1z M19,5H8C6.9,5,6,5.9,6,7v14c0,1.1,0.9,2,2,2h11c1.1,0,2-0.9,2-2V7C21,5.9,20.1,5,19,5z M19,21H8V7h11V21z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="strength-meter">
+                <div id="strengthBar" class="bar"></div>
+                <span id="strengthText">STRENGTH: N/A</span>
+            </div>
+        </section>
+
+        <section class="controls-card">
+            <div class="control-group">
+                <div class="label-row">
+                    <label>KEY_LENGTH</label>
+                    <span id="lengthValue">16</span>
+                </div>
+                <input type="range" id="lengthSlider" min="8" max="64" value="16">
+            </div>
+
+            <div class="options-grid">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span class="checkmark"></span>
+                    <span class="label-text">UPPERCASE [A-Z]</span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="checkmark"></span>
+                    <span class="label-text">LOWERCASE [a-z]</span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="checkmark"></span>
+                    <span class="label-text">NUMERALS [0-9]</span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="symbols">
+                    <span class="checkmark"></span>
+                    <span class="label-text">SYMBOLS [!@#]</span>
+                </label>
+            </div>
+
+            <button id="generateBtn" class="primary-btn">
+                <span class="btn-text">INITIALIZE_GEN</span>
+                <span class="glitch-effect"></span>
+            </button>
+        </section>
+
+        <footer>
+            <div class="footer-line"></div>
+            <p>&copy; 2026 ANTIGRAVITY_LABS // ENCRYPTION_SECURED</p>
+        </footer>
+    </main>
+
+    <div id="notification" class="notification hidden">COPIED_TO_CLIPBOARD</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
